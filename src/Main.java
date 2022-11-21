@@ -27,7 +27,7 @@ public class Main {
         int rollNumber = sc.nextInt();
         System.out.print("Enter college:");
         String college = sc.next();
-        Student st = new Student(name,admissionNumber, rollNumber, college)
+        Student st = new Student(name,admissionNumber, rollNumber, college);
         studentList.add(st);
         System.out.println("Student Added Successfully");
     }
@@ -61,6 +61,18 @@ public class Main {
         System.out.println("No student found!!!");
     }
 
+    static void deleteStudent() {
+        System.out.print("Enter student admission number:");
+        long code = sc.nextLong();
+        for(int i = 0; i < studentList.size(); i++) {
+            if(studentList.get(i).admissionNumber == code) {
+                studentList.remove(i);
+                System.out.println("Student removed successfully");
+                break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         while(true) {
             System.out.println("------------------ Menu ----------------------");
@@ -80,6 +92,12 @@ public class Main {
                     viewStudent();
                 case 3:
                     searchStudent();
+                case 4:
+                    deleteStudent();
+                case 5:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice");
             }
         }
     }
