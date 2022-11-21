@@ -88,16 +88,22 @@ public class Main {
             switch (choice) {
                 case 1:
                     addStudent();
+                    break;
                 case 2:
                     viewStudent();
+                    break;
                 case 3:
                     searchStudent();
+                    break;
                 case 4:
                     deleteStudent();
+                    break;
                 case 5:
                     System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid choice");
+                    break;
             }
         }
     }
