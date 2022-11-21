@@ -32,6 +32,18 @@ public class Main {
         System.out.println("Student Added Successfully");
     }
 
+    static void viewEmployees() {
+
+        for(int i = 0; i < studentList.size(); i++) {
+            System.out.println("------------------------------------------");
+            System.out.println("Student name "+ studentList.get(i).name);
+            System.out.println("Employee name "+ studentList.get(i).admissionNumber);
+            System.out.println("Employee designation "+ studentList.get(i).rollNumber);
+            System.out.println("Employee salary "+ studentList.get(i).college);
+            System.out.println("------------------------------------------");
+        }
+    }
+
     public static void main(String[] args) {
         while(true) {
             System.out.println("------------------ Menu ----------------------");
@@ -47,6 +59,8 @@ public class Main {
             switch (choice) {
                 case 1:
                     addStudent();
+                case 2:
+                    viewStudent();
             }
         }
     }
