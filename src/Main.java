@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Student Added Successfully");
     }
 
-    static void viewEmployees() {
+    static void viewStudent() {
 
         for(int i = 0; i < studentList.size(); i++) {
             System.out.println("------------------------------------------");
