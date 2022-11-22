@@ -45,6 +45,7 @@ public class Main {
     }
 
     static void searchStudent() {
+        boolean flag = false;
         System.out.print("Enter student admission number:");
         long code = sc.nextLong();
         for(int i = 0; i < studentList.size(); i++) {
@@ -55,10 +56,13 @@ public class Main {
                 System.out.println("Employee designation "+ studentList.get(i).rollNumber);
                 System.out.println("Employee salary "+ studentList.get(i).college);
                 System.out.println("------------------------------------------");
+                flag = true;
                 break;
             }
         }
-        System.out.println("No student found!!!");
+        if(!flag){
+            System.out.println("No student found!!!");
+        }
     }
 
     static void deleteStudent() {
